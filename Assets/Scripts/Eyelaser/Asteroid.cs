@@ -4,7 +4,7 @@ using UnityEngine;
 using Tobii.Gaming;
 
 [RequireComponent(typeof(GazeAware))]
-public class TEST : MonoBehaviour
+public class Asteroid : MonoBehaviour
 {
     private GazeAware gazeAware;
     private GazePoint gazePoints;
