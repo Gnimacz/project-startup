@@ -8,13 +8,11 @@ public class Asteroid : MonoBehaviour
 {
     private GazeAware gazeAware;
     private GazePoint gazePoints;
-    private bool timerStarted = false;
     public Material gazeMaterial;
     public MeshRenderer gazeRenderer;
     [SerializeField] private float stareCounter = 0.0f;
-    [SerializeField] [Range(0.00f,1.00f)] private float stareStep = 0.05f;
+    [SerializeField][Range(0.00f, 1.00f)] private float stareStep = 0.05f;
     [SerializeField] private float threshold = 2f;
-    [SerializeField] private float speed = 0.02f;
     void Start()
     {
         transform.parent = null;
@@ -26,15 +24,14 @@ public class Asteroid : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position += new Vector3(0.03f,0,0);
         if (gazeAware.HasGazeFocus)
         {
             //gazeMaterial.color = Color.red;
-            gazeRenderer.material.color = new Color(1,0,0) * (stareCounter/2);
+            gazeRenderer.material.color = new Color(1, 0, 0) * (stareCounter / 2);
             stareCounter += stareStep;
         }
-        Debug.Log(gazeAware.HasGazeFocus);
-        if(stareCounter >= threshold)
+        // Debug.Log(gazeAware.HasGazeFocus);
+        if (stareCounter >= threshold)
         {
             Destroy(gameObject);
         }

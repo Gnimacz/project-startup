@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 6248161218565537660}
   - component: {fileID: 6248161218565537603}
   - component: {fileID: 6248161218565537602}
-  - component: {fileID: 6248161218565537663}
-  - component: {fileID: 5090561351533855879}
+  - component: {fileID: 5499078958425718373}
   m_Layer: 0
-  m_Name: Asteroid
+  m_Name: Asteroid 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,24 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d87d489c55fc504987b709bbe1e4ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6248161218565537663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6248161218565537601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b2146a61b837134f9cec7a13560c7da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gazeMaterial: {fileID: 2100000, guid: 54fbe7fae14efb24681c3fbc3d4d0c7f, type: 2}
-  gazeRenderer: {fileID: 6248161218565537660}
-  stareCounter: 0
-  stareStep: 0.05
-  threshold: 2
---- !u!114 &5090561351533855879
+--- !u!114 &5499078958425718373
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
