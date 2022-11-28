@@ -5,7 +5,7 @@ using Tobii.Gaming;
 
 public class PlayerController : MonoBehaviour
 {
-    public Camera camera;
+    public Camera cam;
     public float speed = 10.0f;
     public float distanceTreshold = 1.0f;
     public Vector2 inputPosition;
@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         }
 
         RaycastHit hit;
-        Ray ray = camera.ScreenPointToRay(inputPosition);
+        Ray ray = cam.ScreenPointToRay(inputPosition);
 
         if (Physics.Raycast(ray, out hit))
         {
