@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Tobii.Gaming;
 
 public class ObjectRotator : MonoBehaviour
 {
@@ -17,7 +18,11 @@ public class ObjectRotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gazePoint = Input.mousePosition;
+        if (!TobiiAPI.IsConnected) gazePoint = Input.mousePosition;
+        else
+        {
+            gazePoint =  TobiiAPI.GetGazePoint().Screen;
+        }
 
         Vector2 centerPoint = new Vector2(Screen.width/2, Screen.height/2);
         Vector2 gazeFromCenter = gazePoint - centerPoint;

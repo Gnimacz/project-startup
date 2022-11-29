@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18029143, g: 0.22572419, b: 0.30693057, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -221,6 +221,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &915218221
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 906505408045126442, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_Name
+      value: Tobii Initializer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090822743589524879, guid: d49ab89f5bc82d94293fa0ac91bc9ff8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d49ab89f5bc82d94293fa0ac91bc9ff8, type: 3}
 --- !u!1 &1461108929
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +418,8 @@ GameObject:
   - component: {fileID: 1554429843}
   - component: {fileID: 1554429842}
   - component: {fileID: 1554429846}
+  - component: {fileID: 1554429848}
+  - component: {fileID: 1554429847}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -443,12 +514,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 1554429841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90c0a095342c46eb9a877c7a955b0ab7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d6f735a897a1b143ada108c72ed3d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gazePoint: {x: 0, y: 0}
   maxRotationAngle: 5
   rotationSmoothing: 5
+--- !u!114 &1554429847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554429841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7967b7423dbd72b478a9e2baeca4374b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasFocus: 0
+  stateChangeCooldownTime: 1
+  GotFocus:
+    m_PersistentCalls:
+      m_Calls: []
+  LostFocus:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1554429848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554429841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d87d489c55fc504987b709bbe1e4ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2145245532
 GameObject:
   m_ObjectHideFlags: 0
