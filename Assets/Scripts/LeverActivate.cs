@@ -18,8 +18,14 @@ public class LeverActivate : MonoBehaviour
     {
         if (gazeAware.HasGazeFocus)
         {
-            rotateion++;
-            handle.transform.rotation = Quaternion.Euler(-rotateion, -90,0);
+            rotateion += 0.2f;
+            if (handle.transform.rotation.x > 306f)
+            {
+                Debug.Log("A");
+                rotateion = 160f;
+            }
+            Debug.Log(handle.transform.rotation.eulerAngles.x);
+            handle.transform.rotation = Quaternion.Euler(-rotateion, 0, 0);
         }
     }
 }
