@@ -27,29 +27,16 @@ public class PathFollower : MonoBehaviour
         {
             WalkToWayPoint();
         }
-        //if(currentWaypoint < waypoints.Length)
-        //{
-        //    if(currentWaypointTransform == null)
-        //    {
-        //        currentWaypointTransform = waypoints[currentWaypoint];
-        //    }
-        //    WalkToWayPoint();
-        //}
     }
 
     private void WalkToWayPoint()
     {
         distanceTravelled += speed * Time.deltaTime;
         transform.position = creator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
+    }
 
-        //Old
-        //transform.forward = Vector3.RotateTowards(transform.forward, waypoints[currentWaypoint], speed * Time.deltaTime, 0.0f);
-        //transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypoint], speed * Time.deltaTime);
-
-        //if(transform.position == currentWaypointTransform)
-        //{
-        //    currentWaypoint++;
-        //    currentWaypointTransform = waypoints[currentWaypoint];
-        //}
+    public void IsAllowedToMove(bool canHeMove)
+    {
+        canMove = canHeMove;
     }
 }

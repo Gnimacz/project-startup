@@ -123,6 +123,98 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &114465924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 114465926}
+  - component: {fileID: 114465925}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &114465925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114465924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -2, y: 0, z: 0}
+      - {x: 0.062874794, y: -1.7738222, z: 1.006981}
+      - {x: 3.1205418, y: 0.61628306, z: -0.7404165}
+      - {x: 3.4546587, y: 0.23008466, z: 0.019562244}
+      - {x: 4.3230295, y: -0.7736459, z: 1.9947486}
+      - {x: -2.4813733, y: -0.01871121, z: 1.8778552}
+      - {x: 0.19171739, y: 0.5604311, z: 3.3077054}
+      - {x: 1.9351001, y: 0.93814623, z: 4.24025}
+      - {x: -3.4313362, y: 1.2307755, z: -0.6986988}
+      isClosed: 1
+      space: 0
+      controlMode: 0
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 210.83
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 0
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 0
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!4 &114465926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114465924}
+  m_LocalRotation: {x: -0, y: -0, z: -5.4392046e-12, w: 1}
+  m_LocalPosition: {x: -2.391408, y: 0.6, z: -1.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1608562927}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &277457872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -343,16 +435,16 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.5
+          m_FloatArgument: 0.1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   Activate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 398561008}
+      - m_Target: {fileID: 398561016}
         m_TargetAssemblyTypeName: Interactions, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: MoveOnY
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -691,7 +783,7 @@ GameObject:
   - component: {fileID: 1608562926}
   - component: {fileID: 1608562925}
   - component: {fileID: 1608562924}
-  - component: {fileID: 1608562923}
+  - component: {fileID: 1608562928}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -699,23 +791,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1608562923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608562922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff9cb7b3176ae6b428087ac67db2bda1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {x: 4.88, y: 1.97, z: 0}
-  - {x: 8.09, y: 0, z: 0}
-  - {x: 0, y: 0, z: -7.22}
-  speed: 3
 --- !u!65 &1608562924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -786,14 +861,30 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608562922}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.256, y: 0.537, z: -2.2652318}
+  m_LocalRotation: {x: 0.000026106667, y: 0.00070030557, z: -0.00047344508, w: 0.99999964}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 114465926}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.003, y: 0.08, z: -0.054}
+--- !u!114 &1608562928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608562922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9cb7b3176ae6b428087ac67db2bda1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canMove: 1
+  speed: 1
+  creator: {fileID: 114465925}
+  endOfPathInstruction: 1
 --- !u!1 &1891747415
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,7 +1025,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1244bf69ae4cb194484d9ce5769d95fd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.1930711
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1244bf69ae4cb194484d9ce5769d95fd,
         type: 3}

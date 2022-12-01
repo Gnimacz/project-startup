@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(GazeDetector))]
 public class Interactions : MonoBehaviour
 {
     public void Scale(float scaleBy)
