@@ -15,6 +15,7 @@ public class GazeDetector : MonoBehaviour
     [Space]
     public UnityEvent GotFocus;
     public UnityEvent LostFocus;
+    public UnityEvent Activate;
     //this is for the tobii eye tracking position
     GazeAware gazeAwarenessComponent;
 
@@ -36,20 +37,18 @@ public class GazeDetector : MonoBehaviour
         if (currentFocusState != hasFocus)
         {
             currentFocusState = hasFocus;
-            if (delayBeforeTriggering <= 0f)
-            {
-                Debug.Log("Invoked something");
-                if (hasFocus) GotFocus.Invoke();
-                else LostFocus.Invoke();
-            }
-            else if(timeSinceStateChange < delayBeforeTriggering)
-            {
-                Debug.Log("Invoked something else");
-                if (hasFocus) GotFocus.Invoke();
-                else LostFocus.Invoke();
-            }
+
+            if (hasFocus) GotFocus.Invoke();
+            else LostFocus.Invoke();
+
             timeSinceStateChange = 0f;
         }
+
+        if (hasFocus && timeSinceStateChange >= delayBeforeTriggering)
+        {
+            Activate.Invoke();
+        }
+
 
 
     }
