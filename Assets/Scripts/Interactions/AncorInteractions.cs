@@ -27,11 +27,11 @@ public class AncorInteractions : MonoBehaviour
 
     public void Shake()
     {
-        gameObject.transform.localScale = 1f;
+        gameObject.transform.localScale = new Vector3(1f,1f,1f);
     }
 
     public void StopShaking()
     {
-        gameObject.transform.localScale = 0.4f;
+        gameObject.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
     }
 }
