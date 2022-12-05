@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/PlayerController.cs.meta
+guid: 5d6f735a897a1b143ada108c72ed3d08
+========
+guid: 90c0a095342c46eb9a877c7a955b0ab7
+>>>>>>>> NoTobii:Assets/Scripts/ObjectRotator.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

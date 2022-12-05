@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/Move.cs.meta
+guid: 7967b7423dbd72b478a9e2baeca4374b
+========
+guid: 084f9c68db7900901847fc00496ae04a
+>>>>>>>> NoTobii:Assets/Scripts/GazeDetector.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
