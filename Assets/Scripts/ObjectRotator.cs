@@ -26,10 +26,11 @@ public class ObjectRotator : MonoBehaviour
 
         Vector2 centerPoint = new Vector2(Screen.width/2, Screen.height/2);
         Vector2 gazeFromCenter = gazePoint - centerPoint;
-
+        
         Quaternion targetRotation = Quaternion.Euler(
             Map(gazeFromCenter.y, -centerPoint.y, centerPoint.y, -maxRotationAngle, maxRotationAngle),
             Map(gazeFromCenter.x, -centerPoint.x, centerPoint.x, maxRotationAngle, -maxRotationAngle), 0);
+        
 
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation,  Time.deltaTime * rotationSmoothing);
 
