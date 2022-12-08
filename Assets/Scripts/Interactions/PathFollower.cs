@@ -33,6 +33,7 @@ public class PathFollower : MonoBehaviour
     {
         distanceTravelled += speed * Time.deltaTime;
         transform.position = creator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
+        transform.rotation = creator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
     }
 
     public void IsAllowedToMove(bool canHeMove)
