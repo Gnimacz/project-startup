@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{def2b657-4c91-4cfc-9ce9-1aeda6d8512a}">
+		<property name="assetPath">
+			<value>Gentle waves.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>55.276041666666664</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f6fb6132-ab4a-443b-a21e-8bc335986ba2}</destination>
+		</relationship>
+	</object>
+</objects>
