@@ -11,6 +11,7 @@ public class CameraLaserHandler : MonoBehaviour
 
     private Vector3 historicPoint = new Vector3();
     private bool hasHistoricPoint = false;
+    public float offset = 0f;
 
     [Range(0.1f, 1.0f),
          Tooltip(
@@ -27,7 +28,7 @@ public class CameraLaserHandler : MonoBehaviour
         gazePoint = TobiiAPI.GetGazePoint();
         Vector2 gazePointViewport = gazePoint.Viewport;
         Vector3 pointInWorld = new Vector3();
-        pointInWorld = cam.ViewportToWorldPoint(new Vector3(gazePointViewport.x, gazePointViewport.y, cam.nearClipPlane));
+        pointInWorld = cam.ViewportToWorldPoint(new Vector3(gazePointViewport.x, gazePointViewport.y, cam.nearClipPlane + offset));
         laserObject.transform.position = Smoothify(pointInWorld);
     }
 

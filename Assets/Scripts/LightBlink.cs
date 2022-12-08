@@ -17,7 +17,6 @@ public class LightBlink : MonoBehaviour
 
     void Update()
     {
-        Debug.Log((int)Time.fixedTime);
         if(canBlink && (int)Time.fixedTime % blinkTime == 0)
         {
             randerer.sharedMaterial = shader;

@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class SeaGrass : MonoBehaviour
 {
+    public Animator subAnimator;
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("trigger enter");
         if (other.CompareTag("fish"))
         {
-            Debug.Log("FISHs");
-            Destroy(gameObject);
-        }
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("fish"))
-        {
-            Debug.Log("FISHdfghms");
+            subAnimator.SetTrigger("GrassRemoved");
+            ProgressManager.SeaGrassRemoved = true;
             Destroy(gameObject);
         }
     }
